@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>identitycard.me - Making the internet a safer place</title>
+
+        <meta name="description" content="identitycard.me - Making the internet a safer place">
+        <meta name="author" content="identitycard.me">
+        <meta name="robots" content="noindex, nofollow">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+        <link rel="shortcut icon" href="resources/img/favicon.png">
+        <link rel="apple-touch-icon" href="resources/img/icon57.png" sizes="57x57">
+        <link rel="apple-touch-icon" href="resources/img/icon72.png" sizes="72x72">
+        <link rel="apple-touch-icon" href="resources/img/icon76.png" sizes="76x76">
+        <link rel="apple-touch-icon" href="resources/img/icon114.png" sizes="114x114">
+        <link rel="apple-touch-icon" href="resources/img/icon120.png" sizes="120x120">
+        <link rel="apple-touch-icon" href="resources/img/icon144.png" sizes="144x144">
+        <link rel="apple-touch-icon" href="resources/img/icon152.png" sizes="152x152">
+        <link rel="apple-touch-icon" href="resources/img/icon180.png" sizes="180x180">
+        <!-- END Icons -->
+
+        <!-- Stylesheets -->
+        <!-- Bootstrap is included in its original form, unaltered -->
+        <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+
+        <!-- Related styles of various icon packs and plugins -->
+        <link rel="stylesheet" href="resources/css/plugins.css">
+
+        <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
+        <link rel="stylesheet" href="resources/css/main.css">
+
+        <!-- The themes stylesheet of this template (for using specific theme color in individual elements - must included last) -->
+        <link rel="stylesheet" href="resources/css/themes.css">
+        <!-- END Stylesheets -->
+
+        <!-- Modernizr (browser feature detection library) & Respond.js (enables responsive CSS code on browsers that don't support it, eg IE8) -->
+        <script src="resources/js/vendor/modernizr-respond.min.js"></script>
+
+        <!-- Google ReCaptcha -->
+        <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    </head>
+    <body>
+        <!-- Page Container -->
+        <!-- In the PHP version you can set the following options from inc/config file -->
+        <!-- 'boxed' class for a boxed layout -->
+        <div id="page-container">
+            <!-- Site Header -->
+            <header>
+                <div class="container">
+                    <!-- Site Logo -->
+                    <a href="index.html" class="site-logo">
+                        <img src="resources/img/logo/logo_green33.png" alt="Site Logo"> <strong>Beagle</strong>design
+                    </a>
+                    <!-- Site Logo -->
+
+                    <!-- Site Navigation -->
+                    <nav>
+                        <!-- Menu Toggle -->
+                        <!-- Toggles menu on small screens -->
+                        <a href="javascript:void(0)" class="btn btn-default site-menu-toggle visible-xs visible-sm">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <!-- END Menu Toggle -->
+
+                        <!-- Main Menu -->
+                        <ul class="site-nav">
+                            <!-- Toggles menu on small screens -->
+                            <li class="visible-xs visible-sm">
+                                <a href="javascript:void(0)" class="site-menu-toggle text-center">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </li>
+                            <!-- END Menu Toggle -->
+                            <li class="active">
+                                <a data-translate="top-menu-home" href="">Home</a>
+                            </li>
+                            <li>
+                                <a data-translate="top-menu-mission" href="#mission">Mission</a>
+                            </li>
+                            <li>
+                                <a data-translate="top-menu-privacy" href="#privacy">Privacy</a> <!-- Add an id tag to jump there -->
+                            </li>
+                            <li>
+                                <a data-translate="top-menu-security" href="#security">Security</a>
+                            </li>
+                            <li>
+                                <a data-translate="top-menu-developers" href="#developers">Developers</a>
+                            </li>
+                            <li>
+                                <a data-translate="top-menu-helpers" href="contact.html">Help</a>
+                            </li>
+                            <li>
+                                <a data-translate="top-menu-login" href="javascript:void(0)" class="site-nav-sub"><i class="fa fa-angle-down site-nav-arrow"></i>Login</a>
+                                <ul>
+                                    <li>
+                                        <a href="#modal-login" data-toggle="modal">Login</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="#signup">Sign Up</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- END Main Menu -->
+                    </nav>
+                    <!-- END Site Navigation -->
+                </div>
+            </header>
+
+            <!-- Regular Modal -->
+            <div id="modal-login" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <!-- Login Container -->
+                    <div id="login-container" class="animation-slideDown">
+                        <!-- Login Title -->
+                        <div class="login-title text-right">
+                            <h1>
+                                <img src="resources/img/placeholders/avatars/avatar2.jpg" alt="logo" class="img-circle pull-left">
+                                <strong>Log</strong> in<br>
+                            </h1>
+                        </div>
+                        <!-- END Login Title -->
+
+                        <!-- Login Block -->
+                        <div class="block">
+                            <form action="https://identitycard.me/login" method="post" class="form-horizontal push">
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="gi gi-envelope"></i></span>
+                                            <input type="text" name="email" class="form-control" placeholder="email">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
+                                            <input type="password" name="password" class="form-control" placeholder="password">
+                                                <div class="input-group-btn">
+                                                    <button type="submit" class="btn btn-primary"><i class="fa fa-unlock-alt"></i> Log in</button>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- END Login Block -->
+                    </div>
+                    <!-- END Login Container -->
+                </div>
+            </div>
+            <!-- END Regular Modal -->
+
+            <!-- END Site Header -->
+
+            <!-- Home Carousel -->
+            <div id="home-carousel" class="carousel carousel-home slide" data-ride="carousel" data-interval="5000">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <section class="site-section site-section-light site-section-top themed-background-default">
+                            <div class="container">
+                                <h1 class="text-center animation-slideDown hidden-xs"><strong>    Who says the internet has to be full of creeps?
+</strong></h1>
+                                <h2 class="text-center animation-slideUp push hidden-xs">Bring your project to life months sooner</h2>
+                                <p class="text-center animation-fadeIn">
+                                    <img src="resources/img/placeholders/screenshots/slider images-01.png" alt="Promo Image 1">
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="item">
+                        <section class="site-section site-section-light site-section-top themed-background-fire">
+                            <div class="container">
+                                <h1 class="text-center animation-fadeIn360 hidden-xs"><strong>    We are making the internet safer for everyone.
+</strong></h1>
+                                <h2 class="text-center animation-fadeIn360 push hidden-xs">Letting you focus on creating your project</h2>
+                                <p class="text-center animation-fadeInLeft">
+                                    <img src="resources/img/placeholders/screenshots/slider images-02.png" alt="Promo Image 2">
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="item">
+                        <section class="site-section site-section-light site-section-top themed-background-amethyst">
+                            <div class="container">
+                                <h1 class="text-center animation-hatch hidden-xs"><strong>Increase your customer's experience and reduce the level of fraud.
+</strong></h1>
+                                <h2 class="text-center animation-hatch push hidden-xs">If you are an online business or social service, you can increase your customer's experience and reduce the level of fraud.</h2>
+                                <p class="text-center animation-hatch">
+                                    <img src="resources/img/placeholders/screenshots/slider images-03.png" alt="Promo Image 3">
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="item">
+                        <section class="site-section site-section-light site-section-top themed-background-modern">
+                            <div class="container">
+                                <h1 class="text-center animation-fadeInLeft hidden-xs"><strong>Tons of features are designed &amp; waiting for you</strong></h1>
+                                <h2 class="text-center animation-fadeInRight push hidden-xs">Everything you need for your project</h2>
+                                <p class="text-center animation-fadeIn360">
+                                    <img src="resources/img/placeholders/screenshots/slider images-04.jpg" alt="Promo Image 4">
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- END Wrapper for slides -->
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#home-carousel" data-slide="prev">
+                    <span>
+                        <i class="fa fa-chevron-left"></i>
+                    </span>
+                </a>
+                <a class="right carousel-control" href="#home-carousel" data-slide="next">
+                    <span>
+                        <i class="fa fa-chevron-right"></i>
+                    </span>
+                </a>
+                <!-- END Controls -->
+            </div>
+            <!-- END Home Carousel -->
+
+            <!-- Action -->
+            <section class="site-content site-section">
+                <div class="container">
+                    <div class="site-block text-center">
+                        <a href="http://goo.gl/TDOSuC" class="btn btn-lg btn-success"><i class="fa fa-shopping-cart"></i> Purchase ProUI ($21)</a>
+                        <a href="http://pixelcave.com/demo/proui" class="btn btn-lg btn-primary"><i class="fa fa-share"></i> Live Preview</a>
+                    </div>
+                    <hr>
+                </div>
+            </section>
+            <!-- END Action -->
+
+            <!-- Promo #1 -->
+            <section class="site-content site-section site-slide-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 site-block visibility-none" data-toggle="animation-appear" data-animation-class="animation-fadeInRight" data-element-offset="-180">
+                            <img src="resources/img/placeholders/screenshots/slider images-12.png" alt="Promo #1" class="img-responsive">
+                        </div>
+                        <div class="col-sm-6 col-md-5 col-md-offset-1 site-block visibility-none" data-toggle="animation-appear" data-animation-class="animation-fadeInLeft" data-element-offset="-180">
+                            <h3 class="h2 site-heading site-heading-promo"><strong>Mission</strong> </h3>
+                            <p class="promo-content">•  Your online world is expanding. You are meeting new acquaintances online. You are buying things online. You are consuming entertainment online <a href="features.html">Learn More..</a></p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </section>
+            <!-- END Promo #1 -->
+
+            <!-- Promo #2 -->
+            <section class="site-content site-section site-slide-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-5 site-block visibility-none" data-toggle="animation-appear" data-animation-class="animation-fadeInRight" data-element-offset="-180">
+                            <h3 class="h2 site-heading site-heading-promo"><strong>Privacy</strong> </h3>
+                            <p class="promo-content"> If you're a user, you can increase your online trust rating by providing various documentation that reliably verifies your identity <a href="features.html">Learn More..</a></p>
+                        </div>
+                        <div class="col-sm-6 col-md-offset-1 site-block visibility-none" data-toggle="animation-appear" data-animation-class="animation-fadeInLeft" data-element-offset="-180">
+                            <img src="resources/img/placeholders/screenshots/slider images-13.png" alt="Promo #2" class="img-responsive">
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </section>
+            <!-- END Promo #2 -->
+
+            <!-- Promo #3 -->
+            <section class="site-content site-section site-slide-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 site-block visibility-none" data-toggle="animation-appear" data-animation-class="animation-fadeInRight" data-element-offset="-180">
+                            <img src="resources/img/placeholders/screenshots/slider images-14.png" alt="Promo #3" class="img-responsive">
+                        </div>
+                        <div class="col-sm-6 col-md-5 col-md-offset-1 site-block visibility-none" data-toggle="animation-appear" data-animation-class="animation-fadeInLeft" data-element-offset="-180">
+                            <h3 class="h2 site-heading site-heading-promo"><strong>Security</strong> </h3>
+                            <p class="promo-content">Security is of paramount importance to us. Without revealing too much information about our security measures, we can tell you this <a href="features.html">Learn More..</a></p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </section>
+            <!-- END Promo #3 -->
+
+            <!-- Promo #4 -->
+            <section class="site-content site-section site-slide-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-5 site-block visibility-none" data-toggle="animation-appear" data-animation-class="animation-fadeInRight" data-element-offset="-180">
+                            <h3 class="h2 site-heading site-heading-promo"><strong>Developers</strong> </h3>
+                            <p class="promo-content">if you are a developer at a business wanting integrate with “idc connect”, then please read the FAQ, Terms and Conditions <a href="features.html">Learn More..</a></p>
+                        </div>
+                        <div class="col-sm-6 col-md-offset-1 site-block visibility-none" data-toggle="animation-appear" data-animation-class="animation-fadeInLeft" data-element-offset="-180">
+                            <img src="resources/img/placeholders/screenshots/slider images-15.png" alt="Promo #4" class="img-responsive">
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </section>
+            <!-- END Promo #4 -->
+
+            <!-- Testimonials -->
+            <section class="site-content site-section">
+                <div class="container">
+                    <!-- Testimonials Carousel -->
+                    <div id="testimonials-carousel" class="carousel slide carousel-html" data-ride="carousel" data-interval="4000">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#testimonials-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#testimonials-carousel" data-slide-to="1"></li>
+                            <li data-target="#testimonials-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- END Indicators -->
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner text-center">
+                            <div class="active item">
+                                <p>
+                                    <img src="resources/img/placeholders/avatars/avatar12.jpg" alt="Avatar" class="img-circle">
+                                </p>
+                                <blockquote class="no-symbol">
+                                    <p>An awesome team that brought our ideas to life! Highly recommended!</p>
+                                    <footer><strong>Sophie Illich</strong>, example.com</footer>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <p>
+                                    <img src="resources/img/placeholders/avatars/avatar7.jpg" alt="Avatar" class="img-circle">
+                                </p>
+                                <blockquote class="no-symbol">
+                                    <p>I have never imagined that our final product would look that good!</p>
+                                    <footer><strong>David Cull</strong>, example.com</footer>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <p>
+                                    <img src="resources/img/placeholders/avatars/avatar9.jpg" alt="Avatar" class="img-circle">
+                                </p>
+                                <blockquote class="no-symbol">
+                                    <p>An extraordinary service that helped us grow way too fast!</p>
+                                    <footer><strong>Nathan Brown</strong>, example.com</footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <!-- END Wrapper for slides -->
+                    </div>
+                    <!-- END Testimonials Carousel -->
+                </div>
+            </section>
+            <!-- END Testimonials -->
+
+            <section id="signup" class="site-content site-section site-section-light themed-background-dark-night">
+                <div class="container">
+                    <h3 class="site-heading text-center"><strong>Sign Up Today!</strong></h3>
+                    <div class="row site-block text-center">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <form action="https://identitycard.me/register" method="post" class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <div class="g-recaptcha" data-sitekey="6LcEdQMTAAAAACoaaifIIfCh-skRa6VUsGluPava" style="width:304px; margin: 0 auto;"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <input type="text" id="register-firstname" name="register-name" class="form-control" placeholder="Firstname">
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="text" id="register-lastname" name="register-lastname" class="form-control" placeholder="Lastname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <label class="sr-only" for="register-email">Your Email</label>
+                                        <div class="input-group input-group-xs">
+                                            <input type="text" id="register-email" name="register-email" class="form-control" placeholder="Your Email">
+                                            <div class="input-group-btn">
+                                                <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Sign Up</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Stats -->
+            <section class="site-content site-section themed-background">
+                <div class="container">
+                    <!-- Stats Row -->
+                    <!-- CountTo (initialized in js/app.js), for more examples you can check out https://github.com/mhuggins/jquery-countTo -->
+                    <div class="row" id="counters">
+                        <div class="col-sm-4">
+                            <div class="counter site-block">
+                                <span data-toggle="countTo" data-to="6800" data-after="+"></span>
+                                <small>Projects</small>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="counter site-block">
+                                <span data-toggle="countTo" data-to="5500" data-after="+"></span>
+                                <small>Happy Customers</small>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="counter site-block">
+                                <span data-toggle="countTo" data-to="100" data-after="+"></span>
+                                <small>New Accounts Today</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Stats Row -->
+                </div>
+            </section>
+            <!-- END Quick Stats -->
+
+            <!-- Footer -->
+            <footer class="site-footer site-section">
+                <div class="container">
+                    <!-- Footer Links -->
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <h4 class="footer-heading">About Us</h4>
+                            <ul class="footer-nav list-inline">
+                                <li><a href="about.html">Mission</a></li>
+                                <li><a href="contact.html">Privacy</a></li>
+                                <li><a href="contact.html">Security</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <h4 class="footer-heading">Developer Resources</h4>
+                            <ul class="footer-nav list-inline">
+                                <li><a href="javascript:void(0)">Documentation</a></li>
+                                <li><a href="javascript:void(0)">Help</a></li>
+                                <li><a href="javascript:void(0)">Tutorial</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <h4 class="footer-heading">Why Us?</h4>
+                            <ul class="footer-nav list-inline">
+                                <li><a href="javascript:void(0)">Case Studies</a></li>
+                                <li><a href="javascript:void(0)">Stories</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <h4 class="footer-heading">&copy;<span id="year-copy">&nbsp;</span><a href="http://goo.gl/TDOSuC"><strong>identitycard.</strong>me</a></h4>
+                            <ul class="footer-nav list-inline">
+                                <li>ABN: 123 456 678</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END Footer Links -->
+                </div>
+            </footer>
+            <!-- END Footer -->
+        </div>
+        <!-- END Page Container -->
+
+        <!-- Scroll to top link, initialized in js/app.js - scrollToTop() -->
+        <a href="#" id="to-top"><i class="fa fa-angle-up"></i></a>
+
+        <!-- Include Jquery library from Google's CDN but if something goes wrong get Jquery from local file -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>!window.jQuery && document.write(decodeURI('%3Cscript src="resources/js/vendor/jquery-1.11.2.min.js"%3E%3C/script%3E'));</script>
+
+        <!-- Bootstrap.js, Jquery plugins and Custom JS code -->
+        <script src="resources/js/vendor/bootstrap.min.js"></script>
+        <script src="resources/js/plugins.js"></script>
+        <script src="resources/js/app.js"></script>
+
+        <!-- Language Translation and Errors -->
+        <script>
+            function getQueryParameter(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+
+            //Language Translation
+            var lang = getQueryParameter('lang');
+            
+            if (lang !== '') {
+                $("[data-translate]").jqTranslate(['index'], { path: 'resources/lang', defaultLang: 'en', forceLang: lang});
+            } else {
+                //Documentation: https://github.com/Belelros/jqueryTranslator
+                $("[data-translate]").jqTranslate(['index'], { path: 'resources/lang', defaultLang: 'en'});
+            }
+
+            var err = getQueryParameter('error');
+
+            if (err.substring(0,6) === 'login-')
+            {
+                if (err === 'login-cred')
+                    $('#modal-statusbar').text( "Username or Password is incorrect." ); //Show status bar and indicate that username or password is not correct
+                else if (err === 'login-recaptcha')
+                    $('#modal-statusbar').text( "Please indicate that you are human." ); //Show status bar and indicate that username or password is not correct
+
+                //Show login box
+                $('#modal-login').modal('show');
+            }
+        </script>
+
+    </body>
+</html>
